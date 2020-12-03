@@ -6,12 +6,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentInstructionsBinding
 
 
-class IntructionsFragment : Fragment() {
+class InstructionsFragment : Fragment() {
 
     private lateinit var binding: FragmentInstructionsBinding
 
@@ -27,10 +28,11 @@ class IntructionsFragment : Fragment() {
             false
         )
 
-        binding.btnGoShop.setOnClickListener {
+        binding.btnOk.setOnClickListener { view ->
 
 
-            findNavController().navigate(IntructionsFragmentDirections.actionIntructionsFragmentToShoeFragment())
+            view.findNavController()
+                .navigate(InstructionsFragmentDirections.actionIntructionsFragmentToShoeFragment())
         }
 
 

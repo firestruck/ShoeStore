@@ -1,12 +1,12 @@
 package com.udacity.shoestore.ui.fragments.onboarding
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
-import androidx.navigation.fragment.findNavController
+import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentOnboardingBinding
 
@@ -26,9 +26,9 @@ class OnboardingFragment : Fragment() {
             false
         )
 
-        binding.btnOnboarding.setOnClickListener {
+        binding.btnHow.setOnClickListener {view ->
 
-            findNavController().navigate(OnboardingFragmentDirections.actionOnboardingFragmentToIntructionsFragment())
+            view.findNavController().navigate(OnboardingFragmentDirections.actionOnboardingFragmentToIntructionsFragment())
         }
 
 

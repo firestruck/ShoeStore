@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentLoginBinding
@@ -29,14 +30,14 @@ private lateinit var binding: FragmentLoginBinding
         )
 
 
-        binding.btnLogin.setOnClickListener {
+        binding.btnLogin.setOnClickListener { view ->
 
-            findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToOnboardingFragment())
+            view.findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToOnboardingFragment())
         }
 
-        binding.btnRegister.setOnClickListener {
+        binding.btnRegister.setOnClickListener { view ->
 
-            findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToOnboardingFragment())
+            view.findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToOnboardingFragment())
         }
 
 

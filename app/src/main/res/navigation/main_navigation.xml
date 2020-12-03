@@ -8,42 +8,71 @@
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.udacity.shoestore.ui.fragments.login.LoginFragment"
-        android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_loginFragment_to_onboardingFragment"
-            app:destination="@id/onboardingFragment" />
+            app:destination="@id/onboardingFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit"
+            app:popUpTo="@id/loginFragment" />
     </fragment>
     <fragment
         android:id="@+id/onboardingFragment"
         android:name="com.udacity.shoestore.ui.fragments.onboarding.OnboardingFragment"
-        android:label="fragment_onboarding"
-        tools:layout="@layout/fragment_onboarding" >
+        android:label="Welcome"
+        tools:layout="@layout/fragment_onboarding">
         <action
             android:id="@+id/action_onboardingFragment_to_intructionsFragment"
-            app:destination="@id/intructionsFragment" />
+            app:destination="@id/intructionsFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit" />
     </fragment>
     <fragment
         android:id="@+id/intructionsFragment"
-        android:name="com.udacity.shoestore.ui.fragments.instructions.IntructionsFragment"
-        android:label="fragment_intructions"
-        tools:layout="@layout/fragment_instructions" >
+        android:name="com.udacity.shoestore.ui.fragments.instructions.InstructionsFragment"
+        android:label="How to"
+        tools:layout="@layout/fragment_instructions">
         <action
             android:id="@+id/action_intructionsFragment_to_shoeFragment"
-            app:destination="@id/shoeFragment" />
+            app:destination="@id/shoeFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="false" />
     </fragment>
     <fragment
         android:id="@+id/shoeFragment"
         android:name="com.udacity.shoestore.ui.fragments.shoe_store.ShoeListFragment"
-        android:label="fragment_shoe"
-        tools:layout="@layout/fragment_shoelist" >
+        android:label="Shoe List"
+        tools:layout="@layout/fragment_shoelist">
         <action
             android:id="@+id/action_shoeFragment_to_shoeDetailFragment"
-            app:destination="@id/shoeDetailFragment" />
+            app:destination="@id/shoeDetailFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit" />
     </fragment>
     <fragment
         android:id="@+id/shoeDetailFragment"
         android:name="com.udacity.shoestore.ui.fragments.shoe_store.detail.ShoeDetailFragment"
-        android:label="fragment_shoe_detail"
-        tools:layout="@layout/fragment_shoe_detail" />
+        android:label="Shoe Detail"
+        tools:layout="@layout/fragment_shoe_detail" >
+        <action
+            android:id="@+id/action_shoeDetailFragment_to_shoeFragment"
+            app:destination="@id/shoeFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit"
+            app:popUpTo="@id/shoeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>
