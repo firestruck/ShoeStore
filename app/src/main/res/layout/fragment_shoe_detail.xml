@@ -12,6 +12,8 @@
 
     <ScrollView style="@style/background">
 
+        <!-- ConstraintLayout because is more efective(easier) to align all the views inside-->
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
